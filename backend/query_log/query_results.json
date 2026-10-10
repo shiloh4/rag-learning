@@ -1,0 +1,42 @@
+{
+    "ids": [
+        [
+            "documents\\CS3510\\L12.pdf-0-0",
+            "documents\\CS3510\\L12.pdf-0-1"
+        ]
+    ],
+    "embeddings": null,
+    "documents": [
+        [
+            "CS 3510 Algorithms\n2/29/2024\nLecture 12: Knapsack\nLecturer: Abrahim Ladha\nScribe(s): Adam Zamlynny\nKnapsack is a core problem to Dynamic Programming, and it\u2019s pretty easy to under-\nstand. Knapsack is a hard problem though; we don\u2019t have or believe there is a polynomial\ntime solution. It\u2019s also a good segway into the next unit because there are many problems\nlike it.\n1\nProblem\nSuppose you are given n items (vi, wi) where vi is the value of item i and wi is the weight\nof item i. You have a capacity W. Your goal is steal a subset of the items to maximize the\nvalue subject to having the sum of the weights be less than or equal to the capacity.\nAs an example consider if you have W = 6, wi = (1, 2, 3, 4), vi = (12, 17, 18, 25).\n1 If\nyou picked one and two, you\u2019d have a value of 29. If you picked two and three, you\u2019d have\na value of 35 which is better than if you\u2019d picked one and two. If you picked using a greedy\nstrategy, you\u2019d choose four and two which would give you 42. The optimal solutio",
+            "cked using a greedy\nstrategy, you\u2019d choose four and two which would give you 42. The optimal solution to this\nis picking one two and three which will give you 47. You could also brute force this by\nanalyzing all 2n subsets.\n2\nSolution\nLet\u2019s start with a two dimensional solution. T[i, j] needs to be an intermediary version\nof some capacity and some item, so that at the end we could index at T[W, n] giving us\nthe maximum value for the weight and considering all items. Then let\u2019s define our table\nT[i, j] where T[i, j] is the maximum profit with a capacity i, and only considering items\n1...j. In this variant of knapsack, there is only one copy of an item. Steal or no steal. Then\niteratively we can build up the smaller cells in the table to the bigger items.\nFor our recurrence, let\u2019s consider what the last possible step is in the process. You\nchoose or don\u2019t choose the nth item. If you don\u2019t pick the item, the solution is same as if\nyou had never considered the item. Your value will be the "
+        ]
+    ],
+    "uris": null,
+    "included": [
+        "metadatas",
+        "documents",
+        "distances"
+    ],
+    "data": null,
+    "metadatas": [
+        [
+            {
+                "chunk_idx": 0,
+                "source": "documents\\CS3510\\L12.pdf",
+                "page": 0
+            },
+            {
+                "chunk_idx": 1,
+                "page": 0,
+                "source": "documents\\CS3510\\L12.pdf"
+            }
+        ]
+    ],
+    "distances": [
+        [
+            0.5662006735801697,
+            0.735235333442688
+        ]
+    ]
+}

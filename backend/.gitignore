@@ -1,3 +1,6 @@
 .env
 .venv/
-chroma/
+chroma_db/
+documents/
+extracted_docs/
+*pycache*/
